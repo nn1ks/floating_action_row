@@ -23,7 +23,6 @@ This package contains three Widgets: `FloatingActionRow`, `FloatingActionRowButt
 | shape        | ShapeBorder                    | -                       | -                 |
 | heroTag      | String                         | Tag for Hero animations | -                 |
 
-
 Note: `FloatingActionRowButton` and `FloatingActionRowDivider` both extend `FloatingActionRowChild` so that you can use those two widgets as children.
 
 ### FloatingActionRowButton
@@ -48,7 +47,7 @@ Note: `FloatingActionRowButton` and `FloatingActionRowDivider` both extend `Floa
 
 ## Issues & Feedback
 
-Please file an issue to send feedback or report a bug. Thank you!
+Please file an [issue](https://github.com/niklas-8/floating_action_row/issues) to send feedback or report a bug. Thank you!
 
 ## Contributing
 
