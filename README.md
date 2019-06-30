@@ -2,6 +2,8 @@
 
 A Flutter package that provides a widget with a row of floating action buttons.
 
+<img src="assets/1.jpg" style="width: 200px">
+
 ## Usage
 
 To use this plugin, add `floating_action_row` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
