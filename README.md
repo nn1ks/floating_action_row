@@ -2,7 +2,7 @@
 
 A Flutter package that provides a widget with a row of floating action buttons.
 
-<img src="assets/1.jpg" width="220px">
+<img src="https://github.com/niklas-8/floating_action_row/blob/master/assets/1.jpg" width="220px">
 
 ## Usage
 
