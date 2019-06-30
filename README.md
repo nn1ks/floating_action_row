@@ -1,8 +1,8 @@
 # floating_action_row
 
-A Flutter package that provides a widget with a row of floating action buttons.
+A Flutter package that provides a widget with a row or column of floating action buttons.
 
-<img src="https://github.com/niklas-8/floating_action_row/blob/master/assets/1.jpg" width="220px">
+<img src="https://raw.githubusercontent.com/niklas-8/floating_action_row/master/assets/1.jpg" width="220px">
 
 ## Usage
 
@@ -12,16 +12,17 @@ This package contains three Widgets: `FloatingActionRow`, `FloatingActionRowButt
 
 ### FloatingActionRow
 
-| Property     | Type                           | Description             | Default           |
-|--------------|--------------------------------|-------------------------|-------------------|
-| children     | List<'FloatingActionRowChild'> | Children of this widget | -                 |
-| elevation    | double                         | Drop shadow             | 6                 |
-| color        | Color                          | Background color        | -                 |
-| height       | double                         | -                       | 56                |
-| padding      | EdgeInsets                     | -                       | EdgeInsets.all(0) |
-| borderRadius | BorderRadius                   | -                       | -                 |
-| shape        | ShapeBorder                    | -                       | -                 |
-| heroTag      | String                         | Tag for Hero animations | -                 |
+| Property     | Type                           | Description                   | Default           |
+|--------------|--------------------------------|-------------------------------|-------------------|
+| children     | List<'FloatingActionRowChild'> | Children of this widget       | -                 |
+| axis         | Axis                           | Switch between row and column | Axis.horizontal   |
+| elevation    | double                         | Drop shadow                   | 6                 |
+| color        | Color                          | Background color              | -                 |
+| height       | double                         | -                             | 56                |
+| padding      | EdgeInsets                     | -                             | EdgeInsets.all(0) |
+| borderRadius | BorderRadius                   | -                             | -                 |
+| shape        | ShapeBorder                    | -                             | -                 |
+| heroTag      | String                         | Tag for Hero animations       | -                 |
 
 Note: `FloatingActionRowButton` and `FloatingActionRowDivider` both extend `FloatingActionRowChild` so that you can use those two widgets as children.
 

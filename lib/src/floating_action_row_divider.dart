@@ -8,7 +8,7 @@ class FloatingActionRowDivider extends FloatingActionRowChild {
   FloatingActionRowDivider({
     Color color,
     this.width = 1,
-    EdgeInsets padding = const EdgeInsets.symmetric(vertical: 10),
+    EdgeInsets padding,
   }) : super(color: color, padding: padding);
 
   @override
@@ -21,10 +21,17 @@ class FloatingActionRowDivider extends FloatingActionRowChild {
 
     result = LayoutBuilder(
       builder: (context, constraints) {
+        bool isColumn = false;
+        if (constraints.maxHeight > constraints.maxWidth) {
+          isColumn = true;
+        }
+        EdgeInsets defaultPadding = isColumn
+            ? EdgeInsets.symmetric(horizontal: 10)
+            : EdgeInsets.symmetric(vertical: 10);
         return Container(
-          width: width,
-          height: constraints.maxHeight,
-          margin: padding,
+          width: isColumn ? constraints.maxWidth : width,
+          height: isColumn ? width : constraints.maxHeight,
+          margin: padding ?? defaultPadding,
           color: color ?? defaultColor.withOpacity(.4),
         );
       },

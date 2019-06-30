@@ -29,9 +29,15 @@ class FloatingActionRowButton extends FloatingActionRowChild {
 
     result = LayoutBuilder(
       builder: (context, constraints) {
+        bool isColumn = false;
+        if (constraints.maxHeight > constraints.maxWidth) {
+          isColumn = true;
+        }
+        double defaultSize =
+            isColumn ? constraints.maxWidth : constraints.maxHeight;
         return SizedBox(
-          width: size ?? constraints.maxHeight,
-          height: size ?? constraints.maxHeight,
+          width: size ?? defaultSize,
+          height: size ?? defaultSize,
           child: Container(
             child: RawMaterialButton(
               elevation: 0,
