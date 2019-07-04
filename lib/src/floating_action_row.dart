@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'floating_action_row_child.dart';
-
+/// Creates a row/column that looks like a FloatingActionButton.
+///
+/// Use [FloatingActionRowButton], [FloatingActionRowDivider] or any other
+/// widgets as children.
+///
+/// If a [shape] is specified, then the [borderRadius] property must be null.
 class FloatingActionRow extends StatelessWidget {
-  final List<FloatingActionRowChild> children;
+  final List<Widget> children;
+
+  /// Switch between row and column
   final Axis axis;
   final double elevation;
   final Color color;
@@ -13,9 +19,10 @@ class FloatingActionRow extends StatelessWidget {
   final EdgeInsets padding;
   final BorderRadius borderRadius;
   final ShapeBorder shape;
+
+  /// Tag for hero animations
   final String heroTag;
 
-  /// If a [shape] is specified, then the [borderRadius] property must be null.
   FloatingActionRow({
     @required this.children,
     this.axis = Axis.horizontal,
