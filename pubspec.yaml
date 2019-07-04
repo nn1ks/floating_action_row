@@ -1,6 +1,6 @@
 name: floating_action_row
 description: A Flutter package that provides a widget with a row or column of floating action buttons.
-version: 0.0.3
+version: 0.1.0
 author: Niklas Sauter <niklas.sauter@gmx.de>
 homepage: https://github.com/niklas-8/floating_action_row
 
