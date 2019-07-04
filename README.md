@@ -12,6 +12,27 @@ To use this plugin, add `floating_action_row` as a [dependency in your pubspec.y
 
 View the [documentation](https://pub.dev/documentation/floating_action_row/latest/floating_action_row/floating_action_row-library.html) for more information.
 
+## Example
+
+```dart
+FloatingActionRow(
+    color: Colors.blueAccent,
+    children: <Widget>[
+        FloatingActionRowButton(
+            icon: Icon(Icons.add),
+            onTap: () {}
+        ),
+        FloatingActionRowDivider(),
+        FloatingActionRowButton(
+            icon: Icon(Icons.arrow_forward),
+            onTap: () {}
+        ),
+    ],
+)
+```
+
+See the `example` directory for a full example.
+
 ## Issues & Feedback
 
 Please file an [issue](https://github.com/niklas-8/floating_action_row/issues) to send feedback or report a bug. Thank you!
