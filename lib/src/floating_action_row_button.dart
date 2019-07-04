@@ -1,23 +1,28 @@
 import 'package:flutter/material.dart';
 
-import 'floating_action_row_child.dart';
-
-class FloatingActionRowButton extends FloatingActionRowChild {
+/// Creates a button for [FloatingActionRow]
+class FloatingActionRowButton extends StatelessWidget {
   final Icon icon;
+
+  /// foreground color for [icon]
+  final Color color;
+
+  /// width and height of this widget
   final double size;
+  final EdgeInsets padding;
   final ShapeBorder shape;
   final Color backgroundColor;
   final GestureTapCallback onTap;
 
   FloatingActionRowButton({
     @required this.icon,
-    Color color,
+    this.color,
     this.size,
-    EdgeInsets padding = const EdgeInsets.all(0),
+    this.padding = const EdgeInsets.all(0),
     this.shape,
     this.backgroundColor = Colors.transparent,
     @required this.onTap,
-  }) : super(color: color, padding: padding);
+  });
 
   @override
   Widget build(BuildContext context) {
