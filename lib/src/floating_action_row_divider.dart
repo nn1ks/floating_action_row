@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'floating_action_row_child.dart';
-
-class FloatingActionRowDivider extends FloatingActionRowChild {
+/// Creates a divider for [FloatingActionRow]
+class FloatingActionRowDivider extends StatelessWidget {
+  final Color color;
   final double width;
+  final EdgeInsets padding;
 
   FloatingActionRowDivider({
-    Color color,
+    this.color,
     this.width = 1,
-    EdgeInsets padding,
-  }) : super(color: color, padding: padding);
+    this.padding,
+  });
 
   @override
   Widget build(BuildContext context) {
