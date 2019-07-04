@@ -4,23 +4,25 @@ import 'package:flutter/material.dart';
 class FloatingActionRowButton extends StatelessWidget {
   final Icon icon;
 
-  /// foreground color for [icon]
+  /// Background color
   final Color color;
 
-  /// width and height of this widget
+  /// Width and height of this widget
   final double size;
   final EdgeInsets padding;
   final ShapeBorder shape;
-  final Color backgroundColor;
+
+  /// Foreground color for [icon]
+  final Color foregroundColor;
   final GestureTapCallback onTap;
 
   FloatingActionRowButton({
     @required this.icon,
-    this.color,
+    this.color = Colors.transparent,
     this.size,
     this.padding = const EdgeInsets.all(0),
     this.shape,
-    this.backgroundColor = Colors.transparent,
+    this.foregroundColor,
     @required this.onTap,
   });
 
@@ -47,7 +49,7 @@ class FloatingActionRowButton extends StatelessWidget {
             child: RawMaterialButton(
               elevation: 0,
               highlightElevation: 0,
-              fillColor: backgroundColor,
+              fillColor: color,
               padding: padding,
               shape: shape ??
                   RoundedRectangleBorder(
@@ -55,7 +57,7 @@ class FloatingActionRowButton extends StatelessWidget {
                   ),
               child: IconTheme.merge(
                 data: IconThemeData(
-                  color: color ?? defaultColor,
+                  color: foregroundColor ?? defaultColor,
                 ),
                 child: icon,
               ),
