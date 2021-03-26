@@ -8,27 +8,27 @@ class FloatingActionRowButton extends StatelessWidget {
   final Color color;
 
   /// Width and height of this widget
-  final double size;
+  final double? size;
   final EdgeInsets padding;
-  final ShapeBorder shape;
+  final ShapeBorder? shape;
 
   /// Foreground color for [icon]
-  final Color foregroundColor;
+  final Color? foregroundColor;
   final GestureTapCallback onTap;
 
   FloatingActionRowButton({
-    @required this.icon,
+    required this.icon,
     this.color = Colors.transparent,
     this.size,
     this.padding = const EdgeInsets.all(0),
     this.shape,
     this.foregroundColor,
-    @required this.onTap,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    Color defaultColor =
+    Color? defaultColor =
         Theme.of(context).floatingActionButtonTheme.foregroundColor ??
             Theme.of(context).accentIconTheme.color;
 

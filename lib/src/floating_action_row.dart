@@ -12,19 +12,20 @@ class FloatingActionRow extends StatelessWidget {
   /// Switch between row and column
   final Axis axis;
   final double elevation;
-  final Color color;
+
+  final Color? color;
 
   /// If [axis] is Axis.vertical, then the [height] property defines the width.
   final double height;
   final EdgeInsets padding;
-  final BorderRadius borderRadius;
-  final ShapeBorder shape;
+  final BorderRadius? borderRadius;
+  final ShapeBorder? shape;
 
   /// Tag for hero animations
-  final String heroTag;
+  final String? heroTag;
 
   FloatingActionRow({
-    @required this.children,
+    required this.children,
     this.axis = Axis.horizontal,
     this.elevation = 6,
     this.color,
@@ -79,7 +80,7 @@ class FloatingActionRow extends StatelessWidget {
 
     if (heroTag != null) {
       result = Hero(
-        tag: heroTag,
+        tag: heroTag!,
         child: result,
       );
     }
