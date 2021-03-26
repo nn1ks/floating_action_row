@@ -20,7 +20,7 @@ class Example extends StatefulWidget {
 class _ExampleState extends State<Example> {
   @override
   Widget build(BuildContext context) {
-    var children = List<Widget>();
+    var children = <Widget>[];
     children.add(
       FloatingActionRowButton(
         icon: Icon(Icons.add),
